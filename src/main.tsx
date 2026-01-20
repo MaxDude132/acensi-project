@@ -15,7 +15,7 @@ import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 import { ErrorFallback } from '@/components'
 
-const router = createRouter({ routeTree })
+const router = createRouter({ routeTree, basepath: '/acensi-project' })
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -30,7 +30,6 @@ declare module '@tanstack/react-router' {
     router: typeof router
   }
 }
-
 
 const theme = createTheme({
   primaryColor: 'violet',

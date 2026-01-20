@@ -5,12 +5,13 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/acensi-project/',
   plugins: [
     tanstackRouter({
       target: 'react',
       autoCodeSplitting: true,
     }),
-    react()
+    react(),
   ],
   resolve: {
     alias: {
