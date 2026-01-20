@@ -1,49 +1,49 @@
 import { AppShell, Burger, Group, NavLink, Title } from '@mantine/core'
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { useLocation, useNavigate } from '@tanstack/react-router';
-import ColorSchemeToggle from './ColorSchemeToggle';
-import LanguageSwitcher from './LanguageSwitcher';
-import NavbarToggleButton from './NavbarToggleButton';
-import { HEADER_HEIGHT, NAVBAR_WIDTH, TRANSITION_DURATION } from '@/config/layout';
-import { useNavLinks } from '@/components/hooks/useNavLinks';
-import Footer from './Footer';
-import { APP_NAME } from '@/config/env';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks'
+import { useLocation, useNavigate } from '@tanstack/react-router'
+import ColorSchemeToggle from './ColorSchemeToggle'
+import LanguageSwitcher from './LanguageSwitcher'
+import NavbarToggleButton from './NavbarToggleButton'
+import { HEADER_HEIGHT, NAVBAR_WIDTH, FOOTER_HEIGHT, TRANSITION_DURATION } from '@/config/layout'
+import { useNavLinks } from '@/components/hooks/useNavLinks'
+import Footer from './Footer'
+import { APP_NAME } from '@/config/env'
 
 interface AppProps {
-  children?: React.ReactNode;
+  children?: React.ReactNode
 }
 
 function MaxAppShell({ children }: AppProps) {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const isMobile = useMediaQuery('(max-width: 768px)')
-  const [opened, { toggle }] = useDisclosure(!isMobile);
+  const [opened, { toggle }] = useDisclosure(!isMobile)
 
   // Pass hook values here, e.g.: useNavLinks({ isAuthenticated: useAuth().isAuthenticated })
-  const { filteredNavLinks, showNavbar, rootNavLink } = useNavLinks();
+  const { filteredNavLinks, showNavbar, rootNavLink } = useNavLinks()
 
   return (
     <AppShell
       padding="md"
       header={{ height: HEADER_HEIGHT }}
-      navbar={showNavbar ? {
-        width: opened ? NAVBAR_WIDTH: 49,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      } : undefined}
+      footer={{ height: FOOTER_HEIGHT }}
+      navbar={
+        showNavbar
+          ? {
+              width: opened ? NAVBAR_WIDTH : 49,
+              breakpoint: 'sm',
+              collapsed: { mobile: !opened },
+            }
+          : undefined
+      }
     >
       <AppShell.Header h={HEADER_HEIGHT}>
         <Group h="100%" px="md">
-          {showNavbar &&
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              size="sm"
-              hiddenFrom='sm'
-            />
-          }
-          <Title onClick={() => navigate({ to: rootNavLink.link })} style={{ cursor: 'pointer' }}>{ APP_NAME }</Title>
+          {showNavbar && <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />}
+          <Title onClick={() => navigate({ to: rootNavLink.link })} style={{ cursor: 'pointer' }}>
+            {APP_NAME}
+          </Title>
 
           <Group ml="auto">
             <LanguageSwitcher />
@@ -74,9 +74,13 @@ function MaxAppShell({ children }: AppProps) {
         </AppShell.Navbar>
       )}
 
-      <AppShell.Main style={{ transition: `padding ${TRANSITION_DURATION}ms ease-in-out` }}>{children}</AppShell.Main>
+      <AppShell.Main style={{ transition: `padding ${TRANSITION_DURATION}ms ease-in-out` }}>
+        {children}
+      </AppShell.Main>
 
-      <AppShell.Footer><Footer /></AppShell.Footer>
+      <AppShell.Footer>
+        <Footer />
+      </AppShell.Footer>
     </AppShell>
   )
 }
