@@ -1,0 +1,75 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "home": "Home",
+    "goBack": "Go Back",
+    "tryAgain": "Try Again"
+  },
+  "home": {
+    "welcome": "Welcome to {{appName}}",
+    "description": "A modern (but fake) EUR/USD converter."
+  },
+  "converter": {
+    "currentRate": "Current rate",
+    "overrideRate": "Override rate*",
+    "amount": "{{currency}} Amount",
+    "valueIn": "Value in {{currency}}",
+    "convertFrom": "Convert from {{currency}}",
+    "rateOverrideHint": "* The rate override will only be used if it is within 2% of the current rate.",
+    "time": "Time",
+    "rate": "Rate",
+    "rateOverride": "Rate Override",
+    "initialValue": "Initial Value",
+    "convertedValue": "Converted Value",
+    "previousConversions": "Previous Conversions"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "email": "Email",
+    "confirmPassword": "Confirm Password",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSubtitle": "Enter your credentials to access your account",
+    "registerSubtitle": "Create an account to get started",
+    "loginSuccess": "You have been logged in successfully.",
+    "logoutSuccess": "You have been logged out successfully.",
+    "registerSuccess": "Your account has been created successfully.",
+    "registerError": "Registration failed. Please try again.",
+    "invalidCredentials": "Invalid credentials. Please try again.",
+    "usernamePlaceholder": "your_username",
+    "passwordPlaceholder": "Your password",
+    "emailPlaceholder": "your@email.com"
+  },
+  "errors": {
+    "notFound": "Page Not Found",
+    "notFoundMessage": "The page you're looking for doesn't exist or has been moved. Please check the URL or navigate back to the homepage.",
+    "somethingWrong": "Something went wrong",
+    "unexpectedError": "An unexpected error occurred. Please try again or return to the homepage.",
+    "goToHomepage": "Go to Homepage"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "passwordMinLength": "Password must be at least {{count}} characters",
+    "usernameMinLength": "Username must be at least {{count}} characters",
+    "passwordsDoNotMatch": "Passwords do not match"
+  }
+}

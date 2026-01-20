@@ -1,0 +1,75 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "home": "Accueil",
+    "goBack": "Retour",
+    "tryAgain": "Réessayer"
+  },
+  "home": {
+    "welcome": "Bienvenue sur {{appName}}",
+    "description": "Un convertisseur EUR/USD moderne (mais faux)."
+  },
+  "converter": {
+    "currentRate": "Taux actuel",
+    "overrideRate": "Remplacer le taux*",
+    "amount": "Montant {{currency}}",
+    "valueIn": "Valeur en {{currency}}",
+    "convertFrom": "Convertir depuis {{currency}}",
+    "rateOverrideHint": "* Le taux de remplacement ne sera utilisé que s'il est à une distance de moins de 2% du taux actuel.",
+    "time": "Heure",
+    "rate": "Taux",
+    "rateOverride": "Taux remplacé",
+    "initialValue": "Valeur initiale",
+    "convertedValue": "Valeur convertie",
+    "previousConversions": "Conversions précédentes"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "Inscription",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "email": "Courriel",
+    "confirmPassword": "Confirmer le mot de passe",
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se déconnecter",
+    "forgotPassword": "Mot de passe oublié?",
+    "noAccount": "Vous n'avez pas de compte?",
+    "hasAccount": "Vous avez déjà un compte?",
+    "loginSubtitle": "Entrez vos identifiants pour accéder à votre compte",
+    "registerSubtitle": "Créez un compte pour commencer",
+    "loginSuccess": "Vous avez été connecté avec succès.",
+    "logoutSuccess": "Vous avez été déconnecté avec succès.",
+    "registerSuccess": "Votre compte a été créé avec succès.",
+    "registerError": "L'inscription a échoué. Veuillez réessayer.",
+    "invalidCredentials": "Identifiants invalides. Veuillez réessayer.",
+    "usernamePlaceholder": "votre_nom_utilisateur",
+    "passwordPlaceholder": "Votre mot de passe",
+    "emailPlaceholder": "votre@courriel.com"
+  },
+  "errors": {
+    "notFound": "Page non trouvée",
+    "notFoundMessage": "La page que vous recherchez n'existe pas ou a été déplacée. Veuillez vérifier l'URL ou retourner à la page d'accueil.",
+    "somethingWrong": "Une erreur s'est produite",
+    "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer ou retourner à la page d'accueil.",
+    "goToHomepage": "Aller à l'accueil"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "invalidEmail": "Adresse courriel invalide",
+    "passwordMinLength": "Le mot de passe doit contenir au moins {{count}} caractères",
+    "usernameMinLength": "Le nom d'utilisateur doit contenir au moins {{count}} caractères",
+    "passwordsDoNotMatch": "Les mots de passe ne correspondent pas"
+  }
+}
