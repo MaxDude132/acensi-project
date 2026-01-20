@@ -1,5 +1,5 @@
 import { Container, Group, Text } from '@mantine/core'
-import { APP_NAME } from '@/config/env'
+import { COMPANY_NAME } from '@/config/env'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,7 +9,7 @@ function Footer() {
       <Container py="md">
         <Group justify="space-around" align="center">
           <Text size="sm" c="dimmed">
-            © {currentYear} {APP_NAME}. All rights reserved.
+            © {currentYear} {COMPANY_NAME}. All rights reserved.
           </Text>
         </Group>
       </Container>
