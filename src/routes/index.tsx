@@ -9,6 +9,7 @@ import {
   Group,
   Button,
   Table,
+  useMantineTheme,
 } from '@mantine/core'
 import { useTranslation } from 'react-i18next'
 import { PageHead } from '@/components'
@@ -34,6 +35,7 @@ export const Route = createFileRoute('/')({
 
 function Index() {
   const { t } = useTranslation()
+  const theme = useMantineTheme()
 
   const [rate, setRate] = useState<number>(1.1)
   const [overridenRate, setOverridenRate] = useState<string>('')
@@ -175,11 +177,21 @@ function Index() {
                 return (
                   <Table.Tr key={index}>
                     <Table.Td>{conversion.time.toLocaleTimeString()}</Table.Td>
-                    <Table.Td fw={!conversion.usedOveridenRate ? 700 : 500}>
-                      {conversion.rate.toFixed(2)}
+                    <Table.Td>
+                      <Text
+                        fw={!conversion.usedOveridenRate ? 800 : 500}
+                        c={!conversion.usedOveridenRate ? theme.primaryColor : undefined}
+                      >
+                        {conversion.rate.toFixed(2)}
+                      </Text>
                     </Table.Td>
-                    <Table.Td fw={conversion.usedOveridenRate ? 700 : 500}>
-                      {conversion.overridenRate}
+                    <Table.Td>
+                      <Text
+                        fw={conversion.usedOveridenRate ? 800 : 500}
+                        c={conversion.usedOveridenRate ? theme.primaryColor : undefined}
+                      >
+                        {conversion.overridenRate}
+                      </Text>
                     </Table.Td>
                     <Table.Td>
                       {conversion.fromValue} {conversion.fromCurrency}
